@@ -1,5 +1,4 @@
-module Rails
-  module Breadcrumbs
+module Breadcrumbs
 
     class ActionController::Base
 
@@ -30,7 +29,6 @@ module Rails
     end
 
   end
-end
 
-ActionController::Base.send(:include, Rails::Breadcrumbs)
-ActionView::Base.send(:include, Rails::Breadcrumbs::Helper)
+ActionController::Base.send(:include, Breadcrumbs)
+ActionView::Base.send(:include, Breadcrumbs::Helper)
